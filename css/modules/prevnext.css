@@ -1,0 +1,25 @@
+.mod-prevnext {
+  display: flex;
+  a {
+    text-decoration: none;
+    padding: 4px var(--gutter);
+    text-align: right;
+    width: 50%;
+    + a {
+      border-left: 1px solid var(--color-border);
+      text-align: left;
+    }
+  }
+  svg {
+    fill: var(--color-accent);
+    vertical-align: -2px;
+  }
+  &-caption {
+    display: block;
+    font-weight: normal;
+    font-size: var(--font-size-h3);
+    font-family: var(--font-family-heading);
+    color: var(--color-accent);
+    margin-bottom: var(--gutter-half);
+  }
+}

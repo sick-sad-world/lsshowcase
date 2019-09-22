@@ -10,6 +10,7 @@
   --font-size: 14px;
   --line-height: 24px;
   --font-family: Arial, Sans-serif;
+  --font-family-heading: 'Oswald', sans-serif;
 
   --font-size-h1: calc(var(--font-size) * 2);
   --font-size-h2: calc(var(--font-size) * 1.625);
@@ -190,6 +191,7 @@ h6 {
   line-height: 1.25;
   font-weight: 500;
   font-family: 'Oswald', sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 h1,
@@ -318,6 +320,21 @@ blockquote:before {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+.copy-text span {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+.copy-text svg {
+    margin-left: 8px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16px;
+            flex: 0 0 16px;
+    -ms-flex: 0 0 var(--icon-size);
+        flex: 0 0 var(--icon-size);
   }
 
 .is-glassy {
@@ -1973,6 +1990,34 @@ button.icon-only:hover,
         color: var(--color-accent);
       }
 
+.mod-prevnext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+  .mod-prevnext a {
+    text-decoration: none;
+    padding: 4px var(--gutter);
+    text-align: right;
+    width: 50%;
+  }
+  .mod-prevnext a + a {
+      border-left: 1px solid var(--color-border);
+      text-align: left;
+    }
+  .mod-prevnext svg {
+    fill: var(--color-accent);
+    vertical-align: -2px;
+  }
+  .mod-prevnext-caption {
+    display: block;
+    font-weight: normal;
+    font-size: var(--font-size-h3);
+    font-family: var(--font-family-heading);
+    color: var(--color-accent);
+    margin-bottom: var(--gutter-half);
+  }
+
 .mod-content-section-heading {
     --padding: 4px;
     border-bottom: 1px solid var(--color-border);
@@ -1995,10 +2040,10 @@ button.icon-only:hover,
       display: block;
       clear: both;
     }
-  .mod-content-section.is--highlighted {
+  .mod-content-section.is-highlighted {
     position: relative;
   }
-  .mod-content-section.is--highlighted:after {
+  .mod-content-section.is-highlighted:after {
       content: '';
       display: block;
       position: absolute;
@@ -2281,8 +2326,9 @@ button.icon-only:hover,
     .mod-full-article-content ol {
       margin-bottom: 1em;
     }
-  .mod-full-article-appendix {
-  }
+  .mod-full-article-appendix > * {
+      margin: var(--grid-gutter) 0;
+    }
   .mod-full-article-share-it {
     padding: var(--gutter) calc(var(--gutter) * 2);
   }
@@ -2598,4 +2644,4 @@ button.icon-only:hover,
 
 
 
-/*# sourceMappingURL=css.6409db11.css.map */
+/*# sourceMappingURL=css.b08791af.css.map */

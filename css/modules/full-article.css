@@ -40,6 +40,9 @@
     }
   }
   &-appendix {
+    > * {
+      margin: var(--grid-gutter) 0;
+    }
   }
   &-share-it {
     padding: var(--gutter) calc(var(--gutter) * 2);

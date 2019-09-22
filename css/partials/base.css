@@ -2,6 +2,7 @@
   --font-size: 14px;
   --line-height: 24px;
   --font-family: Arial, Sans-serif;
+  --font-family-heading: 'Oswald', sans-serif;
 
   --font-size-h1: calc(var(--font-size) * 2);
   --font-size-h2: calc(var(--font-size) * 1.625);
@@ -157,7 +158,7 @@ h6 {
   margin: 0;
   line-height: 1.25;
   font-weight: 500;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-family-heading);
 }
 
 h1,
@@ -261,6 +262,13 @@ blockquote {
     background-color: var(--color-secondary);
     align-items: center;
     justify-content: space-between;
+  }
+  span {
+    flex: 0 1 auto;
+  }
+  svg {
+    margin-left: 8px;
+    flex: 0 0 var(--icon-size);
   }
 }
 

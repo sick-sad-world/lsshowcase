@@ -23,7 +23,7 @@
       clear: both;
     }
   }
-  &.is--highlighted {
+  &.is-highlighted {
     position: relative;
     &:after {
       content: '';
