@@ -117,6 +117,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"icons/twitter.svg":[function(require,module,exports) {
+})({"EVxz":[function(require,module,exports) {
 module.exports = '#7fb50ba507f4f2877acd30b8a9300f35';
 },{}]},{},[], null)

@@ -117,6 +117,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"icons/chevron-right.svg":[function(require,module,exports) {
+})({"h6A2":[function(require,module,exports) {
 module.exports = '#60268efd3e9ddf708e52f0d2635f7710';
 },{}]},{},[], null)

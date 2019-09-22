@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/partials/modal.js":[function(require,module,exports) {
+})({"bh8/":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -154,7 +154,7 @@ function enableModal() {
     destroy: function destroy() {}
   };
 }
-},{}],"js/category.js":[function(require,module,exports) {
+},{}],"N5y7":[function(require,module,exports) {
 "use strict";
 
 var _modal = _interopRequireDefault(require("./partials/modal"));
@@ -162,5 +162,5 @@ var _modal = _interopRequireDefault(require("./partials/modal"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _modal.default)();
-},{"./partials/modal":"js/partials/modal.js"}]},{},["js/category.js"], null)
+},{"./partials/modal":"bh8/"}]},{},["N5y7"], null)
 //# sourceMappingURL=/category.754e6727.js.map
