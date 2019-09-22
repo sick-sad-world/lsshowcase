@@ -2060,9 +2060,7 @@ button.icon-only:hover,
   position: relative;
 }
   .mod-default-article > .overlay-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    grid-gap: var(--gutter);
   }
   .mod-default-article h1 {
     font-size: var(--font-size-h3);
@@ -2077,6 +2075,7 @@ button.icon-only:hover,
   }
   .mod-default-article p {
     margin: 0;
+    line-height: 1.25;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -2091,19 +2090,10 @@ button.icon-only:hover,
         -ms-flex-order: 1;
             order: 1;
   }
-  .mod-default-article-image {
-    width: 40%;
-    max-width: 240px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   .mod-default-article-body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    width: 70%;
-    padding-left: var(--gutter-half);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2120,22 +2110,7 @@ button.icon-only:hover,
   }
   @media screen and (max-width: 520px) {
     .mod-default-article > .overlay-link {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-    }
-    .mod-default-article-image {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: var(--gutter-half);
-    }
-    .mod-default-article picture {
-      height: auto;
-    }
-    .mod-default-article-body {
-      width: 100%;
-      padding-left: 0;
+      grid-gap: 0;
     }
   }
 
@@ -2644,4 +2619,4 @@ button.icon-only:hover,
 
 
 
-/*# sourceMappingURL=css.b08791af.css.map */
+/*# sourceMappingURL=css.1d2c327f.css.map */
