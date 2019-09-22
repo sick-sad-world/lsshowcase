@@ -2,8 +2,8 @@
   font-family: 'Oswald';
   font-weight: 500;
   font-display: swap;
-  src: url('/Oswald.7b74331c.woff2') format('woff2'), url('/Oswald.817e9973.woff') format('woff'),
-    url('/Oswald.9b989b57.ttf') format('truetype');
+  src: url('Oswald.7b74331c.woff2') format('woff2'), url('Oswald.817e9973.woff') format('woff'),
+    url('Oswald.9b989b57.ttf') format('truetype');
 }
 
 :root {
@@ -303,7 +303,7 @@ blockquote:before {
   }
 
 .is-glassy {
-  background-image: url('/noise.ec2be629.svg');
+  background-image: url('noise.ec2be629.svg');
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.3);
@@ -2424,7 +2424,7 @@ button.icon-only:hover,
     z-index: 15;
     height: auto;
     cursor: pointer;
-    background-image: url('/noise.ec2be629.svg');
+    background-image: url('noise.ec2be629.svg');
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
     visibility: collapse;
@@ -2472,4 +2472,4 @@ button.icon-only:hover,
 
 
 
-/*# sourceMappingURL=/css.504c184f.css.map */
+/*# sourceMappingURL=css.60d2bd3f.css.map */

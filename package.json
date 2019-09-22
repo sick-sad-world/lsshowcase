@@ -9,7 +9,7 @@
     "prebundle": "rm -rf ./dist",
     "bundle": "parcel build --no-minify *.html",
     "preghpages": "rm -rf ./docs",
-    "ghpages": "parcel build --no-minify --out-dir=./docs *.html",
+    "ghpages": "parcel build --no-minify --public-url=./ --out-dir=./docs *.html",
     "prebuild": "rm -rf ./build",
     "build": "parcel build --no-source-maps --out-dir=./build *.html",
     "test": "echo \"Error: no test specified\" && exit 1",

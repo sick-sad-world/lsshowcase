@@ -163,4 +163,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _modal.default)();
 },{"./partials/modal":"bh8/"}]},{},["N5y7"], null)
-//# sourceMappingURL=/category.754e6727.js.map
+//# sourceMappingURL=category.754e6727.js.map
