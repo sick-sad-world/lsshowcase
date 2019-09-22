@@ -8,12 +8,12 @@
     "start": "parcel serve --open --no-hmr --port=3001 *.html",
     "prebundle": "rm -rf ./dist",
     "bundle": "parcel build --no-minify *.html",
-    "preghpages": "rm -rf ./gh-pages",
-    "ghpages": "parcel build --no-minify --public-url=/ --out-dir=./hg-pages *.html",
+    "preghpages": "rm -rf ./docs",
+    "ghpages": "parcel build --no-minify --public-url=/ --out-dir=./docs *.html",
     "prebuild": "rm -rf ./build",
     "build": "parcel build --no-source-maps --out-dir=./build *.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clear": "rm -rf ./build ./dist ./gh-pages"
+    "clear": "rm -rf ./build ./dist ./docs"
   },
   "prettier": {
     "tabWidth": 2,
