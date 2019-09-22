@@ -1,0 +1,14 @@
+.mod-full-article {
+  &-header {
+    h1 {
+    }
+    .category-badge {
+    }
+    .secondary-data {
+    }
+  }
+  &-content {
+  }
+  &-appendix {
+  }
+}

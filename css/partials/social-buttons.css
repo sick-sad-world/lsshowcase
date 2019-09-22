@@ -1,0 +1,80 @@
+/*
+  Social buttons widget
+  ==============================================================================
+*/
+.social-buttons {
+  font-size: 1.25em;
+  a {
+    display: inline-flex;
+    vertical-align: middle;
+    font: 0/0 a;
+    border: 1px solid transparent;
+    transition: border-color var(--transition-duration);
+    border-radius: 50%;
+    width: var(--form-element-size);
+    height: var(--form-element-size);
+  }
+  svg {
+    margin: auto;
+    transition: fill var(--transition-duration);
+  }
+  .facebook {
+    svg {
+      fill: color(#4267b2 saturation(- 12%) w(+ 10%));
+    }
+    &:hover {
+      border-color: #4267b2;
+      svg {
+        fill: #4267b2;
+      }
+    }
+  }
+
+  .twitter {
+    svg {
+      fill: color(#00aced saturation(- 12%) w(+ 10%));
+    }
+    &:hover {
+      border-color: #00aced;
+      svg {
+        fill: #00aced;
+      }
+    }
+  }
+
+  .youtube {
+    svg {
+      fill: color(#ff0000 saturation(- 12%) w(+ 10%));
+    }
+    &:hover {
+      border-color: #ff0000;
+      svg {
+        fill: #ff0000;
+      }
+    }
+  }
+
+  .rss {
+    svg {
+      fill: color(#fea500 saturation(- 12%) w(+ 10%));
+    }
+    &:hover {
+      border-color: #fea500;
+      svg {
+        fill: #fea500;
+      }
+    }
+  }
+
+  .reddit {
+    svg {
+      fill: color(#ff4500 saturation(- 12%) w(+ 10%));
+    }
+    &:hover {
+      border-color: #ff4500;
+      svg {
+        fill: #ff4500;
+      }
+    }
+  }
+}

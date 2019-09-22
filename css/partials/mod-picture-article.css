@@ -1,0 +1,34 @@
+.mod-picture-article {
+  position: relative;
+  display: block;
+  h1 {
+    font-size: var(--font-size-h3);
+    padding-top: 4px;
+  }
+  hgroup {
+    order: 2;
+  }
+  footer {
+    --pv: 2px;
+    --size: 24px;
+    position: relative;
+    order: 1;
+    margin-top: calc(var(--size) * -2);
+    height: calc(var(--size) * 2);
+    color: var(--color-secondary);
+    text-align: left;
+    padding: var(--pv) 8px;
+    line-height: calc(var(--size) - (var(--pv) * 2));
+    svg {
+      fill: var(--color-secondary);
+    }
+  }
+  .overlay-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .category-badge {
+    position: absolute;
+    top: 0;
+  }
+}

@@ -1,0 +1,117 @@
+/*
+  Full Menu
+  It shown as fullscreen popup with overlay
+  ==============================================================================
+*/
+
+.mod-fullmenu {
+  --elem-size: var(--form-element-size);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--layout-overlay-width);
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-depth-4);
+  transform: translate3d(-100%, 0, 0);
+  transition: transform var(--transition-duration);
+  &-header {
+    display: flex;
+    align-items: center;
+    margin: var(--gutter) 0;
+    color: var(--color-caption);
+    span {
+      color: var(--color-accent);
+    }
+    h1 {
+      font-size: var(--font-size-h2);
+    }
+    button {
+      margin-right: var(--gutter);
+    }
+  }
+  &-list {
+    overflow: auto;
+    padding: var(--gutter) 0;
+    a {
+      line-height: calc(var(--form-element-size) + var(--gutter));
+      display: block;
+      color: var(--color-main);
+      padding: 0 var(--gutter-half) 0 var(--elem-size);
+      transition: background-color var(--transition-duration);
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        background-color: var(--color-highlight);
+      }
+      &.state-current {
+        color: $c-acc-dk;
+      }
+    }
+    li {
+      display: block;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      > li {
+        border-left: 3px solid transparent;
+        margin: 2px 0;
+        &:after {
+          left: 0;
+        }
+      }
+      ul {
+        a {
+          padding-left: calc(var(--elem-size) * 2);
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  &-search {
+    display: flex;
+    height: calc(var(--elem-size) + var(--gutter-half));
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    input {
+      padding: 0 var(--gutter-half) 0 var(--elem-size);
+      border: 0;
+      flex: 1;
+      align-self: stretch;
+      background-color: transparent;
+    }
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: var(--elem-size);
+    }
+  }
+  &.is-visible {
+    transform: translate3d(0, 0, 0);
+  }
+  @media screen and (max-width: 980px) {
+    &-container {
+      /*transform: translate3d(-100%, 0, 0);*/
+      transition: transform var(--transition-duration) ease-in;
+    }
+    &.transition {
+      .container {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+  @media screen and (max-width: 520px) {
+    &-container {
+      width: 100%;
+      right: 0;
+    }
+  }
+}

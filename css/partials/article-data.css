@@ -1,0 +1,14 @@
+.article-data {
+  list-style: none;
+  padding: 0;
+  font-size: 0.875em;
+  font-style: italic;
+  li {
+    display: inline-block;
+    margin-right: var(--gutter);
+  }
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

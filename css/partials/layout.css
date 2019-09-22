@@ -1,0 +1,87 @@
+/*
+  Global page layout 
+  defines header footer overlay and scrollable area
+  ==============================================================================
+*/
+.layout {
+  &-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-header {
+    position: fixed;
+    z-index: 14;
+    top: 0;
+    width: 100%;
+    height: var(--layout-header);
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow-depth-2);
+  }
+  &-main {
+    margin-top: calc(var(--layout-header) + var(--grid-gutter));
+    flex: 1 1 auto;
+    margin-bottom: var(--grid-gutter);
+  }
+  &-footer {
+    margin-top: var(--grid-gutter);
+  }
+  &-container {
+    padding: 0 var(--grid-gutter);
+    max-width: var(--layout-maxwidth);
+    margin: 0 auto;
+  }
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    height: auto;
+    cursor: pointer;
+    background-image: url('/img/noise.svg');
+    backdrop-filter: blur(4px);
+    visibility: collapse;
+    transition: opacity var(--transition-duration);
+    opacity: 0;
+  }
+  &-modal {
+    z-index: 16;
+  }
+  @media screen and (max-width: 520px) {
+    &-header {
+      height: var(--layout-header-mobile);
+    }
+    &-main {
+      margin-top: calc(var(--layout-header-mobile) + var(--grid-gutter));
+    }
+  }
+}
+.layout-modal.is-visible ~ .layout-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*
+  Helper classes to hide content on specific device
+  ==============================================================================
+*/
+
+@media screen and (min-width: 980px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 980px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}

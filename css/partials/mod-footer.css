@@ -1,0 +1,56 @@
+/*
+  Generic page footer
+  ==============================================================================
+*/
+.mod-footer {
+  text-align: center;
+  > * {
+    display: block;
+    margin: var(--gutter) auto;
+  }
+  &-nav {
+    width: 80%;
+    a {
+      display: inline-block;
+      padding: 0 var(--gutter-half);
+      margin: 0 var(--gutter-half);
+    }
+  }
+  &-aftertext {
+    width: 80%;
+    text-align: center;
+    padding-top: var(--gutter);
+    position: relative;
+    &:before {
+      display: block;
+      content: '';
+      height: 1px;
+      max-width: 320px;
+      background-color: var(--color-border);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  @media screen and (min-width: 520px) and (max-width: 980px) {
+    &-nav {
+      width: auto;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    &-nav {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      a {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        text-indent: var(--gutter);
+        flex: 0 0 50%;
+      }
+    }
+  }
+}
