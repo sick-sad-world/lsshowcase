@@ -1,6 +1,6 @@
 :root {
   --font-size: 14px;
-  --line-height: 20px;
+  --line-height: 24px;
   --font-family: Arial, Sans-serif;
 
   --font-size-h1: calc(var(--font-size) * 2);
@@ -250,6 +250,17 @@ blockquote {
   min-width: 75px;
   &:after {
     left: 100%;
+  }
+}
+
+.copy-text {
+  a {
+    display: flex;
+    border: 1px solid var(--color-border);
+    padding: 4px var(--gutter);
+    background-color: var(--color-secondary);
+    align-items: center;
+    justify-content: space-between;
   }
 }
 

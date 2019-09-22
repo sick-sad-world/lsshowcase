@@ -1,7 +1,6 @@
 @import './partials/fonts.css';
 @import './partials/base.css';
 @import './partials/rainbow.css';
-@import './partials/grid.css';
 @import './partials/social-buttons.css';
 @import './partials/mod-header.css';
 @import './partials/mod-fullmenu.css';
@@ -12,4 +11,6 @@
 @import './partials/mod-picture-article.css';
 @import './partials/mod-top-content.css';
 @import './partials/mod-full-article.css';
+@import './partials/mod-author-info.css';
+@import './partials/grid.css';
 @import './partials/layout.css';

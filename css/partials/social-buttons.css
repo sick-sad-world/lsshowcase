@@ -2,79 +2,114 @@
   Social buttons widget
   ==============================================================================
 */
-.social-buttons {
-  font-size: 1.25em;
+.social {
+  &-buttons,
+  &-icons {
+    font-size: 1.25em;
+    svg {
+      margin: auto;
+      transition: fill var(--transition-duration);
+    }
+    a {
+      display: inline-flex;
+      vertical-align: middle;
+      text-decoration: none;
+      border-style: solid;
+      border-width: 1px;
+      transition: border-color var(--transition-duration);
+    }
+    .facebook {
+      color: color(#4267b2 saturation(- 12%) w(+ 10%));
+      border-color: color(#4267b2 saturation(- 12%) w(+ 10%));
+      svg {
+        fill: color(#4267b2 saturation(- 12%) w(+ 10%));
+      }
+      &:hover {
+        border-color: #4267b2;
+        color: #4267b2;
+        svg {
+          fill: #4267b2;
+        }
+      }
+    }
+
+    .twitter {
+      color: color(#00aced saturation(- 12%) w(+ 10%));
+      border-color: color(#00aced saturation(- 12%) w(+ 10%));
+      svg {
+        fill: color(#00aced saturation(- 12%) w(+ 10%));
+      }
+      &:hover {
+        border-color: #00aced;
+        color: #00aced;
+        svg {
+          fill: #00aced;
+        }
+      }
+    }
+
+    .youtube {
+      color: color(#ff0000 saturation(- 12%) w(+ 10%));
+      border-color: color(#ff0000 saturation(- 12%) w(+ 10%));
+      svg {
+        fill: color(#ff0000 saturation(- 12%) w(+ 10%));
+      }
+      &:hover {
+        border-color: #ff0000;
+        color: #ff0000;
+        svg {
+          fill: #ff0000;
+        }
+      }
+    }
+
+    .rss {
+      color: color(#fea500 saturation(- 12%) w(+ 10%));
+      border-color: color(#fea500 saturation(- 12%) w(+ 10%));
+      svg {
+        fill: color(#fea500 saturation(- 12%) w(+ 10%));
+      }
+      &:hover {
+        border-color: #fea500;
+        color: #fea500;
+        svg {
+          fill: #fea500;
+        }
+      }
+    }
+
+    .reddit {
+      color: color(#ff4500 saturation(- 12%) w(+ 10%));
+      border-color: color(#ff4500 saturation(- 12%) w(+ 10%));
+      svg {
+        fill: color(#ff4500 saturation(- 12%) w(+ 10%));
+      }
+      &:hover {
+        border-color: #ff4500;
+        color: #ff4500;
+        svg {
+          fill: #ff4500;
+        }
+      }
+    }
+  }
+}
+.social-icons {
   a {
-    display: inline-flex;
-    vertical-align: middle;
     font: 0/0 a;
-    border: 1px solid transparent;
-    transition: border-color var(--transition-duration);
+    border-color: transparent;
     border-radius: 50%;
     width: var(--form-element-size);
     height: var(--form-element-size);
   }
+}
+.social-buttons {
+  a {
+    font-size: var(--font-size);
+    border-radius: 2px;
+    padding: 0 8px;
+  }
   svg {
-    margin: auto;
-    transition: fill var(--transition-duration);
-  }
-  .facebook {
-    svg {
-      fill: color(#4267b2 saturation(- 12%) w(+ 10%));
-    }
-    &:hover {
-      border-color: #4267b2;
-      svg {
-        fill: #4267b2;
-      }
-    }
-  }
-
-  .twitter {
-    svg {
-      fill: color(#00aced saturation(- 12%) w(+ 10%));
-    }
-    &:hover {
-      border-color: #00aced;
-      svg {
-        fill: #00aced;
-      }
-    }
-  }
-
-  .youtube {
-    svg {
-      fill: color(#ff0000 saturation(- 12%) w(+ 10%));
-    }
-    &:hover {
-      border-color: #ff0000;
-      svg {
-        fill: #ff0000;
-      }
-    }
-  }
-
-  .rss {
-    svg {
-      fill: color(#fea500 saturation(- 12%) w(+ 10%));
-    }
-    &:hover {
-      border-color: #fea500;
-      svg {
-        fill: #fea500;
-      }
-    }
-  }
-
-  .reddit {
-    svg {
-      fill: color(#ff4500 saturation(- 12%) w(+ 10%));
-    }
-    &:hover {
-      border-color: #ff4500;
-      svg {
-        fill: #ff4500;
-      }
-    }
+    margin-right: 4px;
   }
 }

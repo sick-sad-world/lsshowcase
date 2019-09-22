@@ -1,14 +1,50 @@
 .mod-full-article {
   &-header {
+    hgroup {
+      display: flex;
+      flex-direction: column;
+    }
     h1 {
+      font-size: calc(var(--font-size-h1) * 1.125);
+      margin: var(--gutter) 0;
     }
     .category-badge {
+      order: -1;
+      width: 200px;
     }
-    .secondary-data {
-    }
+  }
+  &-suplemental-data {
+    margin: var(--gutter) 0;
+    padding: var(--gutter-half) 0;
+    border-bottom: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &-content {
+    p,
+    blockquote,
+    figure,
+    iframe,
+    video,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+      margin-bottom: 1em;
+    }
   }
   &-appendix {
+  }
+  &-share-it {
+    padding: var(--gutter) calc(var(--gutter) * 2);
+    .social-buttons {
+      margin-top: 1em;
+    }
   }
 }

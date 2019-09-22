@@ -1,0 +1,17 @@
+.mod-author-info {
+  display: flex;
+  &-image {
+    flex: 0 0 100px;
+    margin-right: var(--gutter);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &-text {
+    padding-right: calc(var(--gutter) * 4);
+  }
+  &-appendix {
+    margin-top: var(--gutter);
+  }
+}
