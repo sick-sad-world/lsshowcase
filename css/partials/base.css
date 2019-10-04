@@ -156,6 +156,20 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+h1,
+.t-h1,
+h2,
+.t-h2,
+h3,
+.t-h3,
+h4,
+.t-h4,
+h5,
+.t-h5,
+h6,
+.t-h6 {
   line-height: 1.25;
   font-weight: 500;
   font-family: var(--font-family-heading);

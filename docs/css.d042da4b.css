@@ -188,6 +188,20 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+h1,
+.t-h1,
+h2,
+.t-h2,
+h3,
+.t-h3,
+h4,
+.t-h4,
+h5,
+.t-h5,
+h6,
+.t-h6 {
   line-height: 1.25;
   font-weight: 500;
   font-family: 'Oswald', sans-serif;
@@ -2355,6 +2369,9 @@ button.icon-only:hover,
 .grid > .cell-rowspan-3 {
         grid-row-end: span 3;
       }
+.grid > .cell-rowspan-4 {
+        grid-row-end: span 4;
+      }
 .grid > .cell-0 {
       display: none;
       grid-column-end: span 0;
@@ -2619,4 +2636,4 @@ button.icon-only:hover,
 
 
 
-/*# sourceMappingURL=css.1d2c327f.css.map */
+/*# sourceMappingURL=css.d042da4b.css.map */

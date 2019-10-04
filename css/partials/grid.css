@@ -19,6 +19,9 @@
       &-3 {
         grid-row-end: span 3;
       }
+      &-4 {
+        grid-row-end: span 4;
+      }
     }
     &-0 {
       display: none;
