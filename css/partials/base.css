@@ -30,7 +30,7 @@
   --color-accent-lt: color(#dc3545 l(50%));
   --color-link: #0b62da;
   --color-icon: #959595;
-  --color-highlight: #ededed;
+  --color-highlight: #f1f1f1;
   --color-caption: #898989;
   --color-border: #dfdfdf;
   --color-selection: color(#0b62da l(45%) alpha(0.3));
