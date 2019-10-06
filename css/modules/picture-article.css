@@ -10,11 +10,11 @@
   }
   footer {
     --pv: 2px;
-    --size: 24px;
+    --size: 32px;
     position: relative;
     order: 1;
-    margin-top: calc(var(--size) * -2);
-    height: calc(var(--size) * 2);
+    margin-top: calc(var(--size) * -1);
+    height: var(--size);
     color: var(--color-secondary);
     text-align: left;
     padding: var(--pv) 8px;
@@ -30,5 +30,10 @@
   .category-badge {
     position: absolute;
     top: 0;
+  }
+  .secondary-data {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

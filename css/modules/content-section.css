@@ -25,6 +25,7 @@
   }
   &.is-highlighted {
     position: relative;
+    padding: var(--gutter);
     &:after {
       content: '';
       display: block;
