@@ -184,7 +184,7 @@
   }
 }
 
-[data-category='picks'] {
+[data-category='trendolizer-picks'] {
   &.is-category {
     &-bg,
     &-after-bg:after,
@@ -269,7 +269,7 @@
     border-top-color: var(--color-blue);
   }
 
-  &[data-category='picks']:after {
+  &[data-category='trendolizer-picks']:after {
     border-left-color: var(--color-indigo);
     border-top-color: var(--color-indigo);
   }

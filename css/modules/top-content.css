@@ -7,13 +7,13 @@
     fill: var(--color-secondary);
   }
 
-  h1 {
+  &-title {
     font-size: var(--font-size-h3);
     text-shadow: 0 0 1px #000;
     order: 2;
   }
 
-  figure {
+  &-image {
     overflow: hidden;
   }
 

@@ -1,14 +1,14 @@
 .mod-picture-article {
   position: relative;
   display: block;
-  h1 {
+  &-title {
     font-size: var(--font-size-h3);
     padding-top: 4px;
   }
-  hgroup {
+  &-titlegroup {
     order: 2;
   }
-  footer {
+  &-footer {
     --pv: 2px;
     --size: 32px;
     position: relative;
