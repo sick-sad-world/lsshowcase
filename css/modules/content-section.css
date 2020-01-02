@@ -2,7 +2,7 @@
   &-heading {
     --padding: 4px;
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: var(--padding);
+    padding-bottom: calc(var(--padding) - 1px);
     margin-bottom: var(--grid-gutter);
     color: var(--color-primary-lt);
   }

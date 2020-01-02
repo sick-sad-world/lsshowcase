@@ -8,7 +8,7 @@
   }
 
   &-title {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h2);
     text-shadow: 0 0 1px #000;
     order: 2;
   }
@@ -33,12 +33,11 @@
     position: relative;
     &:first-child {
       grid-row: span 2;
+      .fixed-media {
+        height: 100%;
+      }
       .mod-top-content-stripe {
         padding: var(--gutter);
-        bottom: calc(var(--gutter) * 2);
-      }
-      h1 {
-        font-size: var(--font-size-h2);
       }
     }
   }
@@ -48,7 +47,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: var(--gutter);
+    bottom: 0;
     z-index: 1;
     align-items: start;
     justify-content: flex-end;

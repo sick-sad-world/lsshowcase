@@ -6,9 +6,9 @@
   "scripts": {
     "prestart": "rm -rf ./dist",
     "start": "parcel serve --open --no-hmr --port=3001 *.html",
-    "prebundle": "rm -rf ./dist",
+    "prebundle": "rm -rf ./dist ./done",
     "bundle": "parcel build --no-minify *.html",
-    "postbundle": "rm dist/*.svg",
+    "postbundle": "node ./after_build.js",
     "preghpages": "rm -rf ./docs",
     "ghpages": "parcel build --no-minify --public-url=./ --out-dir=./docs *.html",
     "postghpages": "rm docs/*.svg",
@@ -16,7 +16,7 @@
     "build": "parcel build --no-source-maps --out-dir=./build *.html",
     "postbuild": "rm build/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clear": "rm -rf ./build ./dist ./docs"
+    "clear": "rm -rf ./build ./dist ./docs ./done"
   },
   "prettier": {
     "tabWidth": 2,

@@ -138,7 +138,6 @@ a:focus img:only-child:after {
 .overlay-link {
   text-decoration: none;
   color: inherit;
-  display: block;
   h1 {
     text-decoration: none;
   }
