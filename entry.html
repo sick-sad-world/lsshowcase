@@ -101,7 +101,21 @@
                   <img src="img/btns.png" style="height:42px;" alt="" />
                 </div>
               </header>
-              <div class="mod-full-article-content">
+              <div class="mod-full-article-content rte-container">
+                <section class="mod-slider">
+                  <div class="mod-slider-container" data-caption="slider-caption">
+                    <figure>
+                      <img alt="Screenshot of https://youtu.be/hh4tfk_8RDU" src="img/cnt1_lg.jpg" />
+                    </figure>
+                    <figure>
+                      <img alt="Screenshot (71).png" src="img/cnt2_lg.jpg" />
+                    </figure>
+                    <figure>
+                      <img alt="Screenshot (82).png" src="img/cnt3_lg.jpg" />
+                    </figure>
+                  </div>
+                  <div class="mod-slider-caption" id="slider-caption"></div>
+                </section>
                 <p>
                   Is John F. Kennedy Jr. alive and will he make a public return to join President Donald Trump as his
                   vice presidential running mate in 2020? No, that's not true: It is a cornerstone of a conspiracy myth
@@ -112,6 +126,20 @@
                   injuries suffered in the crash, which the NTSB blamed on pilot (Kennedy) error. A Massachusetts
                   coroner confirmed their identifies and cause of death.
                 </p>
+                <section class="mod-slider">
+                  <div class="mod-slider-container" data-caption="slider2-caption">
+                    <figure>
+                      <img alt="AAA" src="img/cnt1_lg.jpg" />
+                    </figure>
+                    <figure>
+                      <img alt="BBB" src="img/cnt2_lg.jpg" />
+                    </figure>
+                    <figure>
+                      <img alt="CCC" src="img/cnt3_lg.jpg" />
+                    </figure>
+                  </div>
+                  <div class="mod-slider-caption" id="slider2-caption"></div>
+                </section>
                 <p>
                   The myth of JFK Jr.'s resurrection began around April 2018 with a series of "Q drops" shared on the
                   8Chan forum. QAnon followers -- who believe President Trump is in a war with the "Deep State" to
@@ -403,7 +431,9 @@
                 <!-- Share it -->
                 <section class="mod-content-section ">
                   <header class="mod-content-section-heading">
-                    <h1 class="mod-content-section-title"><span>Want to inform</span> others about the accuracy of this story?</h1>
+                    <h1 class="mod-content-section-title">
+                      <span>Want to inform</span> others about the accuracy of this story?
+                    </h1>
                   </header>
                   <div class="mod-content-section-raw">
                     <!-- Copy Text -->
@@ -628,8 +658,8 @@
                           <img load="lazy" src="/img/cnt5_m.jpg" alt="Fake News Website YourNewsWire" />
                         </picture>
                       </figure>
-                      <hgroup>
-                        <h1>
+                      <hgroup class="mod-picture-article-titlegroup">
+                        <h1 class="mod-picture-article-title">
                           Fake News: NASA Does NOT Admit Climate Change Occurs Because Of Changes In Earth's Solar
                           Orbit, Not Because Of SUVs And Fossil Fuels
                         </h1>
@@ -666,8 +696,8 @@
                           <img load="lazy" src="/img/cnt2_m.jpg" alt="Fake News Website YourNewsWire" />
                         </picture>
                       </figure>
-                      <hgroup>
-                        <h1>
+                      <hgroup class="mod-picture-article-titlegroup">
+                        <h1 class="mod-picture-article-title">
                           Fake News: President Trump Did NOT Tweet 'Handicapped And Minority Children Are Too Disruptive
                           In The Classroom'
                         </h1>
@@ -706,8 +736,8 @@
                           <img load="lazy" src="/img/cnt1_m.jpg" alt="Fake News Website YourNewsWire" />
                         </picture>
                       </figure>
-                      <hgroup>
-                        <h1>
+                      <hgroup class="mod-picture-article-titlegroup">
+                        <h1 class="mod-picture-article-title">
                           Fake News: Chief Justice John Roberts Did NOT Fly With Jeffrey Epstein On At Least Two
                           Occasions
                         </h1>
@@ -755,8 +785,10 @@
                           <img load="lazy" src="/img/cnt2_m.jpg" alt="Fake News Website YourNewsWire" />
                         </picture>
                       </figure>
-                      <hgroup>
-                        <h1>Fake News Website YourNewsWire Renamed NewsPunch (Again) -- Possibly To Avoid Filters</h1>
+                      <hgroup class="mod-picture-article-titlegroup">
+                        <h1 class="mod-picture-article-title">
+                          Fake News-title Website YourNewsWire Renamed NewsPunch (Again) -- Possibly To Avoid Filters
+                        </h1>
                         <h2 class="category-badge is-category-arrow is-category-bg" data-category="hoax-alert">
                           Hoax alert
                         </h2>
@@ -792,8 +824,8 @@
                           <img load="lazy" src="/img/cnt5_m.jpg" alt="Fake News Website YourNewsWire" />
                         </picture>
                       </figure>
-                      <hgroup>
-                        <h1>
+                      <hgroup class="mod-picture-article-titlegroup">
+                        <h1 class="mod-picture-article-title">
                           Fake News: NASA Does NOT Admit Climate Change Occurs Because Of Changes In Earth's Solar
                           Orbit, Not Because Of SUVs And Fossil Fuels
                         </h1>
@@ -830,8 +862,8 @@
                           <img load="lazy" src="/img/cnt1_m.jpg" alt="Fake News Website YourNewsWire" />
                         </picture>
                       </figure>
-                      <hgroup>
-                        <h1>
+                      <hgroup class="mod-picture-article-titlegroup">
+                        <h1 class="mod-picture-article-title">
                           Fake News: Chief Justice John Roberts Did NOT Fly With Jeffrey Epstein On At Least Two
                           Occasions
                         </h1>
@@ -872,8 +904,6 @@
                   ><img
                     src="https://leadstories.com/400xNxLikeandsubscribe.png.pagespeed.ic.bMYCP7D5Zu.webp"
                     width="400"
-                    data-pagespeed-url-hash="2770605925"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                 /></a>
                 <iframe
                   loading="lazy"
@@ -1011,7 +1041,7 @@
     </section>
     <div aria-hidden="true" class="layout-overlay" id="modal-overlay"></div>
     <!-- End FullMenu Overlay -->
-    <script src="js/main.js"></script>
+    <script src="js/entry.js"></script>
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
   </body>
 </html>

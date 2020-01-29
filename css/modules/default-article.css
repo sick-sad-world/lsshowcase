@@ -3,24 +3,24 @@
   > .overlay-link {
     grid-gap: var(--gutter);
   }
-  h1 {
+  &-title {
     font-size: var(--font-size-h3);
     padding-bottom: 4px;
     color: var(--color-link);
   }
-  picture {
+  &-media {
     height: 100%;
     display: flex;
   }
-  p {
+  &-description {
     margin: 0;
-    line-height: 1.25;
+    line-height: var(--line-height-s);
     order: 3;
   }
-  hgroup {
+  &-titlegroup {
     order: 2;
   }
-  footer {
+  &-footer {
     order: 1;
   }
   &-body {

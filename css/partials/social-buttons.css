@@ -18,6 +18,7 @@
       border-width: 1px;
       transition: border-color var(--transition-duration);
     }
+
     .facebook {
       color: color(#4267b2 saturation(- 12%) w(+ 10%));
       border-color: color(#4267b2 saturation(- 12%) w(+ 10%));
@@ -89,6 +90,22 @@
         color: #ff4500;
         svg {
           fill: #ff4500;
+        }
+      }
+    }
+
+    .phone,
+    .email {
+      color: color(#0b62da saturation(- 12%) w(+ 10%));
+      border-color: color(#0b62da saturation(- 12%) w(+ 10%));
+      svg {
+        fill: color(#0b62da saturation(- 12%) w(+ 10%));
+      }
+      &:hover {
+        border-color: #0b62da;
+        color: #0b62da;
+        svg {
+          fill: #0b62da;
         }
       }
     }

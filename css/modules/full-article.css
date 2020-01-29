@@ -22,23 +22,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  &-content {
-    p,
-    blockquote,
-    figure,
-    iframe,
-    video,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    ul,
-    ol {
-      margin-bottom: 1em;
-    }
-  }
   &-appendix {
     > * {
       margin: var(--grid-gutter) 0;

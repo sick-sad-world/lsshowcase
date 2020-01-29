@@ -2,6 +2,7 @@
 @import './partials/base.css';
 @import './partials/rainbow.css';
 @import './partials/social-buttons.css';
+@import '../node_modules/tiny-slider/dist/tiny-slider.css';
 @import './modules/header.css';
 @import './modules/fullmenu.css';
 @import './modules/footer.css';
@@ -10,8 +11,10 @@
 @import './modules/content-section.css';
 @import './modules/default-article.css';
 @import './modules/picture-article.css';
+@import './modules/static-content.css';
 @import './modules/top-content.css';
 @import './modules/full-article.css';
 @import './modules/author-info.css';
+@import './modules/slider.css';
 @import './partials/grid.css';
 @import './partials/layout.css';
