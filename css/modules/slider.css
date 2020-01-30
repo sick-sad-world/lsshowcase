@@ -1,0 +1,88 @@
+.tns-outer {
+  position: relative;
+
+  .tns-ovh {
+    figure {
+      margin: 0;
+      position: relative;
+    }
+  }
+
+  .tns-nav {
+    --button-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    padding: 4px 0;
+    button {
+      display: inline-flex;
+      margin: 0;
+      width: var(--button-size);
+      height: var(--button-size);
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      &:after {
+        content: '';
+        display: block;
+        margin: auto;
+        width: calc(0.5 * var(--button-size));
+        height: calc(0.5 * var(--button-size));
+        box-shadow: var(--shadow-depth-1);
+        background-color: var(--color-highlight);
+        border-radius: 50%;
+      }
+      &:hover:after {
+        background-color: var(--color-highlight);
+      }
+      &.tns-nav-active:after {
+        background-color: var(--color-accent-lt);
+      }
+    }
+  }
+
+  .tns-controls {
+    button {
+      padding: 0;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      width: 64px;
+      height: auto;
+      background-color: rgba(0, 0, 0, 0.24);
+      &[data-controls='prev'] {
+        left: 0;
+      }
+      &[data-controls='next'] {
+        right: 0;
+      }
+    }
+    svg {
+      fill: var(--color-secondary);
+    }
+  }
+
+  .tns-controls button {
+    transition: opacity var(--transition-duration);
+    visibility: collapse;
+    opacity: 0;
+  }
+
+  &:hover {
+    .tns-controls button {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.mod-slider {
+  &-caption {
+    font-style: italic;
+    padding: calc(0.5 * var(--gutter)) var(--gutter) var(--gutter) calc(var(--gutter) * 2);
+  }
+}
