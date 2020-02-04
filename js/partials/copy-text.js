@@ -1,10 +1,18 @@
-export default function attachClipboardCopyHandler(id, text) {
+export default function attachClipboardCopyHandler(id, successText) {
   const el = document.getElementById(id);
 
   function clickListener() {
-    this.select();
-    document.execCommand('copy');
-    alert(text);
+    try {
+      const input = this.querySelector('input[type="hidden"]');
+      input.focus();
+      input.select();
+      const success = document.execCommand('copy');
+      if (success) {
+        alert(successText);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   el.addEventListener('click', clickListener);

@@ -126,25 +126,25 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = dropdown;
 
 function dropdown() {
-  var elems = Array.from(document.querySelectorAll('.dropdown select'));
+  const elems = Array.from(document.querySelectorAll('.dropdown select'));
 
   function listener(e) {
-    var method = e.target.value ? 'add' : 'remove';
+    let method = e.target.value ? 'add' : 'remove';
     e.target.classList[method]('is-value-selected');
     method = e.target.value === '' ? 'add' : 'remove';
     e.target.classList[method]('is-value-placeholder');
   }
 
-  elems.forEach(function (el) {
+  elems.forEach(el => {
     listener({
       target: el
     });
     el.addEventListener('change', listener);
   });
   return {
-    elems: elems,
-    strip: function strip() {
-      elems.forEach(function (el) {
+    elems,
+    strip: () => {
+      elems.forEach(el => {
         el.classList.remove('is-value-selected');
         el.removeEventListener('change', listener);
       });
@@ -159,33 +159,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = enableModal;
 
-function enableModal() {
-  var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var config = Object.assign({
+function enableModal(opts = {}) {
+  const config = Object.assign({
     button: 'menu-button',
     overlay: 'modal-overlay',
     modal: 'menu-modal',
     closeBtn: 'menu-modal-close'
   }, opts);
-  var button = document.getElementById(config.button);
-  var overlay = document.getElementById(config.overlay);
-  var modal = document.getElementById(config.modal);
-  var closeBtn = document.getElementById(config.closeBtn);
-  button.addEventListener('click', function () {
+  const button = document.getElementById(config.button);
+  const overlay = document.getElementById(config.overlay);
+  const modal = document.getElementById(config.modal);
+  const closeBtn = document.getElementById(config.closeBtn);
+  button.addEventListener('click', () => {
     modal.classList.add('is-visible');
     modal.setAttribute('aria-hidden', 'false');
   });
-  overlay.addEventListener('click', function () {
+  overlay.addEventListener('click', () => {
     modal.classList.remove('is-visible');
     modal.setAttribute('aria-hidden', 'true');
     overlay.blur();
   });
-  closeBtn.addEventListener('click', function () {
+  closeBtn.addEventListener('click', () => {
     modal.classList.remove('is-visible');
     modal.setAttribute('aria-hidden', 'true');
   });
   return {
-    destroy: function destroy() {}
+    destroy: () => {}
   };
 }
 },{}],"vV28":[function(require,module,exports) {
@@ -933,7 +932,7 @@ var supportsPassive = false;
 
 try {
   var opts = Object.defineProperty({}, 'passive', {
-    get: function get() {
+    get: function () {
       supportsPassive = true;
     }
   });
@@ -987,11 +986,11 @@ exports.Events = Events;
 function Events() {
   return {
     topics: {},
-    on: function on(eventName, fn) {
+    on: function (eventName, fn) {
       this.topics[eventName] = this.topics[eventName] || [];
       this.topics[eventName].push(fn);
     },
-    off: function off(eventName, fn) {
+    off: function (eventName, fn) {
       if (this.topics[eventName]) {
         for (var i = 0; i < this.topics[eventName].length; i++) {
           if (this.topics[eventName][i] === fn) {
@@ -1001,7 +1000,7 @@ function Events() {
         }
       }
     },
-    emit: function emit(eventName, data) {
+    emit: function (eventName, data) {
       data.type = eventName;
 
       if (this.topics[eventName]) {
@@ -1123,9 +1122,7 @@ var _events = require("./helpers/events.js");
 
 var _jsTransform = require("./helpers/jsTransform.js");
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var tns = function tns(options) {
+var tns = function (options) {
   options = (0, _extend.extend)({
     container: '.slider',
     mode: 'carousel',
@@ -2433,7 +2430,7 @@ var tns = function tns(options) {
     tnsList.forEach(function (item, i) {
       var el = item === 'container' ? outerWrapper : options[item];
 
-      if (_typeof(el) === 'object') {
+      if (typeof el === 'object') {
         var prevEl = el.previousElementSibling ? el.previousElementSibling : false,
             parentEl = el.parentNode;
         el.outerHTML = htmlList[i];
@@ -4257,7 +4254,7 @@ var tns = function tns(options) {
     updateSliderHeight: updateInnerWrapperHeight,
     refresh: initSliderTransform,
     destroy: destroy,
-    rebuild: function rebuild() {
+    rebuild: function () {
       return tns((0, _extend.extend)(options, optionsElements));
     }
   };
@@ -4274,31 +4271,22 @@ exports.default = enableSlider;
 
 var _tinySlider = require("tiny-slider/src/tiny-slider");
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function enableSlider({
+  container,
+  caption,
+  ...opts
+}) {
+  const controls = ['<svg data-role="icon" viewBox="0 0 24 24"><use href="icons/chevron-left.svg"></use></svg>', '<svg data-role="icon" viewBox="0 0 24 24"><use href="icons/chevron-right.svg"></use></svg>'];
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function enableSlider(_ref) {
-  var container = _ref.container,
-      caption = _ref.caption,
-      opts = _objectWithoutProperties(_ref, ["container", "caption"]);
-
-  var controls = ['<svg data-role="icon" viewBox="0 0 24 24"><use href="icons/chevron-left.svg"></use></svg>', '<svg data-role="icon" viewBox="0 0 24 24"><use href="icons/chevron-right.svg"></use></svg>'];
-
-  var setDescription = function setDescription(_ref2) {
-    var container = _ref2.container,
-        index = _ref2.index,
-        slideItems = _ref2.slideItems;
-    var descriptionEl = document.getElementById(container.dataset.caption);
+  const setDescription = ({
+    container,
+    index,
+    slideItems
+  }) => {
+    const descriptionEl = document.getElementById(container.dataset.caption);
 
     if (slideItems[index]) {
-      var img = slideItems[index].querySelector('img');
+      let img = slideItems[index].querySelector('img');
 
       if (img) {
         descriptionEl.innerText = img.getAttribute('alt');
@@ -4308,20 +4296,21 @@ function enableSlider(_ref) {
     }
   };
 
-  var options = _objectSpread({
-    container: container,
+  const options = {
+    container,
     items: 1,
     lazyload: true,
     arrowKeys: true,
     speed: 380,
-    controlsText: controls
-  }, opts);
+    controlsText: controls,
+    ...opts
+  };
 
   if (caption === true) {
     options.onInit = setDescription;
   }
 
-  var slider = (0, _tinySlider.tns)(options);
+  const slider = (0, _tinySlider.tns)(options);
 
   if (caption === true) {
     slider.events.on('indexChanged', setDescription);
@@ -4342,7 +4331,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _modal.default)();
 (0, _dropdown.default)();
-Array.from(document.querySelectorAll('.mod-slider-container')).forEach(function (el) {
+Array.from(document.querySelectorAll('.mod-slider-container')).forEach(el => {
   (0, _slider.default)({
     container: el,
     caption: true,
@@ -4350,4 +4339,4 @@ Array.from(document.querySelectorAll('.mod-slider-container')).forEach(function 
   });
 });
 },{"./partials/dropdown":"BM30","./partials/modal":"bh8M","./partials/slider":"gKnT"}]},{},["G8XX"], null)
-//# sourceMappingURL=entry.e37d842f.js.map
+//# sourceMappingURL=entry.0d555fad.js.map

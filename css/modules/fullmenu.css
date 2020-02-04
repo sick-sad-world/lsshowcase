@@ -74,6 +74,7 @@
   }
   &-search {
     display: flex;
+    flex: 0 0 auto;
     height: calc(var(--elem-size) + var(--gutter-half));
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);

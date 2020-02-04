@@ -25,6 +25,7 @@
   }
   &-logo {
     font: 0 / 0 a;
+    min-width: 120px;
     img {
       display: block;
       width: 180px;
@@ -87,6 +88,9 @@
   @media screen and (max-width: 520px) {
     &:after {
       width: var(--layout-header-mobile);
+    }
+    .layout-container {
+      padding: 0;
     }
     &-button {
       padding: 2px;

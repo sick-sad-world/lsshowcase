@@ -4,6 +4,7 @@
 */
 .social {
   &-buttons,
+  &-share,
   &-icons {
     font-size: 1.25em;
     svg {
@@ -128,5 +129,20 @@
   }
   svg {
     margin-right: 4px;
+  }
+}
+
+.social-share {
+  a {
+    display: inline-block;
+    line-height: 2;
+    padding: 0 var(--gutter);
+    border-radius: 2px;
+    font-family: var(--font-family-heading);
+  }
+  svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: -2px;
   }
 }

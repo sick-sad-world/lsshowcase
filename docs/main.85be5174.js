@@ -126,25 +126,25 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = dropdown;
 
 function dropdown() {
-  var elems = Array.from(document.querySelectorAll('.dropdown select'));
+  const elems = Array.from(document.querySelectorAll('.dropdown select'));
 
   function listener(e) {
-    var method = e.target.value ? 'add' : 'remove';
+    let method = e.target.value ? 'add' : 'remove';
     e.target.classList[method]('is-value-selected');
     method = e.target.value === '' ? 'add' : 'remove';
     e.target.classList[method]('is-value-placeholder');
   }
 
-  elems.forEach(function (el) {
+  elems.forEach(el => {
     listener({
       target: el
     });
     el.addEventListener('change', listener);
   });
   return {
-    elems: elems,
-    strip: function strip() {
-      elems.forEach(function (el) {
+    elems,
+    strip: () => {
+      elems.forEach(el => {
         el.classList.remove('is-value-selected');
         el.removeEventListener('change', listener);
       });
@@ -159,33 +159,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = enableModal;
 
-function enableModal() {
-  var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var config = Object.assign({
+function enableModal(opts = {}) {
+  const config = Object.assign({
     button: 'menu-button',
     overlay: 'modal-overlay',
     modal: 'menu-modal',
     closeBtn: 'menu-modal-close'
   }, opts);
-  var button = document.getElementById(config.button);
-  var overlay = document.getElementById(config.overlay);
-  var modal = document.getElementById(config.modal);
-  var closeBtn = document.getElementById(config.closeBtn);
-  button.addEventListener('click', function () {
+  const button = document.getElementById(config.button);
+  const overlay = document.getElementById(config.overlay);
+  const modal = document.getElementById(config.modal);
+  const closeBtn = document.getElementById(config.closeBtn);
+  button.addEventListener('click', () => {
     modal.classList.add('is-visible');
     modal.setAttribute('aria-hidden', 'false');
   });
-  overlay.addEventListener('click', function () {
+  overlay.addEventListener('click', () => {
     modal.classList.remove('is-visible');
     modal.setAttribute('aria-hidden', 'true');
     overlay.blur();
   });
-  closeBtn.addEventListener('click', function () {
+  closeBtn.addEventListener('click', () => {
     modal.classList.remove('is-visible');
     modal.setAttribute('aria-hidden', 'true');
   });
   return {
-    destroy: function destroy() {}
+    destroy: () => {}
   };
 }
 },{}],"d6sW":[function(require,module,exports) {
@@ -200,4 +199,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _modal.default)();
 (0, _dropdown.default)();
 },{"./partials/dropdown":"BM30","./partials/modal":"bh8M"}]},{},["d6sW"], null)
-//# sourceMappingURL=main.0f66f675.js.map
+//# sourceMappingURL=main.85be5174.js.map

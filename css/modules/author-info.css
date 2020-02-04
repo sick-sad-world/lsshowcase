@@ -18,6 +18,9 @@
     &-content {
       overflow: hidden;
     }
+    &-appendix {
+      padding-left: calc(100px + var(--gutter));
+    }
   }
   @media screen and (max-width: 520px) {
     &-text {
