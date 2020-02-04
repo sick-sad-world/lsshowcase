@@ -1,0 +1,27 @@
+.mod-brief-article {
+  position: relative;
+  .overlay-link {
+    display: flex;
+  }
+  &-image {
+    flex: 0 0 140px;
+    margin-right: var(--gutter);
+  }
+  &-titlegroup {
+  }
+  &-title {
+    font-size: var(--font-size-h4);
+  }
+  &-footer {
+  }
+  .category-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media screen and (min-width: 520px) and (max-width: 980px) {
+    &-image {
+      flex-basis: 240px;
+    }
+  }
+}

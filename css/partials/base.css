@@ -782,6 +782,7 @@ a[type='button'] {
   .mod-slider {
     margin-bottom: 1em;
   }
+  iframe,
   .embeeded-content,
   .twitter-tweet {
     margin-left: auto !important;
