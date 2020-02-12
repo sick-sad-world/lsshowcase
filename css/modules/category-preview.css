@@ -1,0 +1,29 @@
+.mod-category-preview {
+  & > li {
+    margin: 0 !important;
+  }
+  h1 {
+    color: var(--color-link);
+  }
+  &-article {
+    .overlay-link {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      font-size: var(--font-size-h2);
+      line-height: 1.125;
+      margin: var(--gutter-half) 0;
+    }
+    &-media {
+      order: -2;
+    }
+    &-footer {
+      order: -1;
+      margin: var(--gutter-half) 0;
+    }
+    &-body {
+      line-height: 1.5;
+    }
+  }
+}
