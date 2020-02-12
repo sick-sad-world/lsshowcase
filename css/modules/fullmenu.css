@@ -12,6 +12,7 @@
   top: 0;
   left: 0;
   bottom: 0;
+  overflow: hidden;
   width: var(--layout-overlay-width);
   background-color: var(--color-secondary);
   box-shadow: var(--shadow-depth-4);
@@ -75,12 +76,13 @@
   &-search {
     display: flex;
     flex: 0 0 auto;
+    align-items: center;
     height: calc(var(--elem-size) + var(--gutter-half));
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     position: relative;
     input {
-      padding: 0 var(--gutter-half) 0 var(--elem-size);
+      padding: 0 calc(var(--elem-size) * 2) 0 var(--elem-size);
       border: 0;
       flex: 1;
       align-self: stretch;
@@ -93,6 +95,26 @@
       bottom: 0;
       margin: auto;
       width: var(--elem-size);
+    }
+    button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto 0;
+      padding: 0;
+      width: calc(var(--elem-size) * 2);
+      height: var(--elem-size);
+      transform: translate3d(0, 0, 0);
+      transition: transform var(--transition-duration);
+      &:focus,
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+    input:placeholder-shown + button {
+      visibility: visible;
+      transform: translate3d(100%, 0, 0);
     }
   }
   &.is-visible {

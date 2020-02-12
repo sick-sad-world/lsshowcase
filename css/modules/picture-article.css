@@ -26,10 +26,11 @@
   .overlay-link {
     display: flex;
     flex-direction: column;
-  }
-  .category-badge {
-    position: absolute;
-    top: 0;
+    &:hover {
+      .mod-picture-article-title {
+        color: var(--color-link);
+      }
+    }
   }
   .secondary-data {
     text-overflow: ellipsis;

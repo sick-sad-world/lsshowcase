@@ -21,16 +21,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .secondary-data {
+      font-size: 1.25em;
+    }
   }
   &-appendix {
     > * {
       margin: var(--grid-gutter) 0;
     }
   }
-  &-share-it {
-    padding: var(--gutter) calc(var(--gutter) * 2);
-    .social-buttons {
-      margin-top: 1em;
+  @media screen and (max-width: 520px) {
+    &-header {
+      h1 {
+        font-size: var(--font-size-h2);
+      }
+    }
+    &-suplemental-data {
+      flex-direction: column;
+      > * {
+        margin: var(--gutter-half) 0;
+      }
     }
   }
 }

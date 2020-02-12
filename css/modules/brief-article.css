@@ -1,5 +1,6 @@
 .mod-brief-article {
   position: relative;
+  --overlay-font-size: var(--font-size-h4);
   .overlay-link {
     display: flex;
   }
@@ -7,17 +8,14 @@
     flex: 0 0 140px;
     margin-right: var(--gutter);
   }
-  &-titlegroup {
-  }
   &-title {
     font-size: var(--font-size-h4);
   }
-  &-footer {
-  }
   .category-badge {
-    position: absolute;
-    top: 0;
-    left: 0;
+    font-size: 0.875em;
+  }
+  figure.fixed-media .caption-overlay {
+    width: 75%;
   }
   @media screen and (min-width: 520px) and (max-width: 980px) {
     &-image {

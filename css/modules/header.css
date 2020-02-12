@@ -101,6 +101,7 @@
     }
     &-button {
       padding: 2px;
+      margin-left: calc(var(--grid-gutter) * -1);
       width: var(--layout-header-mobile);
     }
     &-logo {

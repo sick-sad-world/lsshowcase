@@ -14,7 +14,9 @@ export default function attachClipboardCopyHandler(id, successText) {
       console.error(err);
     }
   }
-
+  if (!el) {
+    return false;
+  }
   el.addEventListener('click', clickListener);
   return () => el.removeEventListener('click', clickListener);
 }

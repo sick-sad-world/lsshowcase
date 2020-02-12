@@ -37,6 +37,9 @@
     &-bdb {
       border-bottom-color: var(--color-red);
     }
+    &-color {
+      color: var(--color-red);
+    }
   }
 }
 
@@ -60,6 +63,9 @@
     }
     &-bdb {
       border-bottom-color: var(--color-orange);
+    }
+    &-color {
+      color: var(--color-orange);
     }
   }
 }
@@ -85,6 +91,9 @@
     &-bdb {
       border-bottom-color: var(--color-yellow);
     }
+    &-color {
+      color: var(--color-yellow);
+    }
   }
 }
 
@@ -108,6 +117,9 @@
     }
     &-bdb {
       border-bottom-color: var(--color-green);
+    }
+    &-color {
+      color: var(--color-green);
     }
   }
 }
@@ -133,6 +145,9 @@
     &-bdb {
       border-bottom-color: var(--color-teal);
     }
+    &-color {
+      color: var(--color-teal);
+    }
   }
 }
 
@@ -156,6 +171,9 @@
     }
     &-bdb {
       border-bottom-color: var(--color-cyan);
+    }
+    &-color {
+      color: var(--color-cyan);
     }
   }
 }
@@ -181,6 +199,9 @@
     &-bdb {
       border-bottom-color: var(--color-blue);
     }
+    &-color {
+      color: var(--color-blue);
+    }
   }
 }
 
@@ -205,6 +226,9 @@
     &-bdb {
       border-bottom-color: var(--color-indigo);
     }
+    &-color {
+      color: var(--color-indigo);
+    }
   }
 }
 
@@ -228,6 +252,9 @@
     }
     &-bdb {
       border-bottom-color: var(--color-purple);
+    }
+    &-color {
+      color: var(--color-purple);
     }
   }
 }
