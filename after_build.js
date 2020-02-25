@@ -37,6 +37,7 @@ async function run() {
   try {
     console.log('Searching for files...');
     const dir = await readdirAsync(target);
+    const ignored = {};
     deleteFolderRecursive(dest);
     await mkdirAsync(dest);
     console.log(`${dir.length} files found. Processing...`);
@@ -55,7 +56,9 @@ async function run() {
           const promise = await writeFileAsync(destPath, fixedFile, enc);
           console.log('Done');
           return promise;
-        } else if (file.indexOf('.svg') < 0) {
+        } else if (file.indexOf('.svg') > 0) {
+          ignored[file.replace('.svg', '.js')] = true;
+        } else if (file.indexOf('.svg') < 0 && file.indexOf('.jpg') && file.indexOf('.png') < 0 && !ignored[file]) {
           console.log(`File ${file}`);
           console.log(`Copying contents to: ${destPath} ...`);
           const promise = await copyFileAsync(path.join(target, file), destPath);

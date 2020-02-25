@@ -1,0 +1,18 @@
+.mod-not-found {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  &-title {
+    margin: -5% 0 5% 0;
+    display: block;
+    text-align: center;
+  }
+  &-detail {
+    border: 1px solid var(--color-accent-lt);
+    padding: var(--gutter);
+    border-radius: 4px;
+  }
+  @media screen and (max-width: 520px) {
+    width: auto;
+  }
+}

@@ -256,6 +256,17 @@ blockquote {
   }
 }
 
+.theme-reverse {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+}
+
+.slogan {
+  width: 100%;
+  padding: var(--gutter) 0;
+  margin-top: calc(var(--grid-gutter) * -1);
+}
+
 .category-badge {
   padding: 0.2em 1ch;
   font-weight: normal;
@@ -269,8 +280,8 @@ blockquote {
   }
   &.is-image-overlay {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -4px;
+    top: -6px;
     z-index: 2;
     box-shadow: var(--shadow-depth-2);
   }
@@ -400,7 +411,10 @@ ul.article-list {
   list-style: none;
   padding: 0;
   & > li:not(:first-child):not(:last-child) {
-    margin: var(--grid-gutter) 0;
+    margin-top: var(--grid-gutter);
+  }
+  & > li:not(:last-child) {
+    margin-bottom: var(--grid-gutter);
   }
 }
 

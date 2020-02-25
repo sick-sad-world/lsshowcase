@@ -1,15 +1,20 @@
 .mod-page-title {
   &-textbar {
-    --padding: 4px;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: var(--padding);
     margin-bottom: var(--grid-gutter);
-    color: var(--color-primary-lt);
+  }
+  &-subtext {
+    font-family: var(--font-family);
+    font-size: var(--font-size-h3);
   }
   &-text {
+    --padding: 4px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: calc(var(--padding) + 1px);
+    margin-bottom: var(--gutter-half);
+    color: var(--color-primary-lt);
     font-size: calc(var(--font-size-h1) * 1.125);
     span {
-      border-bottom: 1px solid var(--color-caption);
+      border-bottom: 3px solid var(--color-caption);
       color: var(--color-primary);
     }
   }

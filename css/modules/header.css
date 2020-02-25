@@ -70,13 +70,6 @@
       }
     }
   }
-  @media screen and (max-width: 1100px) {
-    &-nav {
-      a {
-        padding: 0 var(--gutter-half);
-      }
-    }
-  }
   @media screen and (max-width: 980px) {
     padding: 0;
     justify-content: space-between;

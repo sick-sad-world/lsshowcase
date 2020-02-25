@@ -12,38 +12,16 @@
     top: 0;
     width: 0;
     height: 0;
-    border: 3px solid transparent;
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 2px;
+    border-right-width: 2px;
   }
 }
 
 [data-category='hoax-alert'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-red);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-red);
-    }
-    &-bdr {
-      border-right-color: var(--color-red);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-red);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-red);
-    }
-    &-color {
-      color: var(--color-red);
-    }
-  }
-}
-
-[data-category='entertainment'] {
   &.is-category {
     &-bg,
     &-after-bg:after,
@@ -70,34 +48,7 @@
   }
 }
 
-[data-category='happening-now'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-yellow);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-yellow);
-    }
-    &-bdr {
-      border-right-color: var(--color-yellow);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-yellow);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-yellow);
-    }
-    &-color {
-      color: var(--color-yellow);
-    }
-  }
-}
-
-[data-category='opinion'] {
+[data-category='analysis'] {
   &.is-category {
     &-bg,
     &-after-bg:after,
@@ -124,61 +75,34 @@
   }
 }
 
-[data-category='politics'] {
+[data-category='red-feed'] {
   &.is-category {
     &-bg,
     &-after-bg:after,
     &-before-bg:before {
-      background-color: var(--color-teal);
+      background-color: var(--color-red);
     }
     &-bdl,
     &-arrow:after {
-      border-left-color: var(--color-teal);
+      border-left-color: var(--color-red);
     }
     &-bdr {
-      border-right-color: var(--color-teal);
+      border-right-color: var(--color-red);
     }
     &-bdt,
     &-arrow:after {
-      border-top-color: var(--color-teal);
+      border-top-color: var(--color-red);
     }
     &-bdb {
-      border-bottom-color: var(--color-teal);
+      border-bottom-color: var(--color-red);
     }
     &-color {
-      color: var(--color-teal);
+      color: var(--color-red);
     }
   }
 }
 
-[data-category='satire'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-cyan);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-cyan);
-    }
-    &-bdr {
-      border-right-color: var(--color-cyan);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-cyan);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-cyan);
-    }
-    &-color {
-      color: var(--color-cyan);
-    }
-  }
-}
-
-[data-category='tech'] {
+[data-category='blue-feed'] {
   &.is-category {
     &-bg,
     &-after-bg:after,
@@ -205,7 +129,7 @@
   }
 }
 
-[data-category='trendolizer-picks'] {
+[data-category='satire'] {
   &.is-category {
     &-bg,
     &-after-bg:after,
@@ -232,77 +156,30 @@
   }
 }
 
-[data-category='video'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-purple);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-purple);
-    }
-    &-bdr {
-      border-right-color: var(--color-purple);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-purple);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-purple);
-    }
-    &-color {
-      color: var(--color-purple);
-    }
-  }
-}
-
 .category-badge,
 .mod-fullmenu-list li {
   &[data-category='hoax-alert']:after {
-    border-left-color: var(--color-red);
-    border-top-color: var(--color-red);
-  }
-
-  &[data-category='entertainment']:after {
     border-left-color: var(--color-orange);
     border-top-color: var(--color-orange);
   }
 
-  &[data-category='happening-now']:after {
-    border-left-color: var(--color-yellow);
-    border-top-color: var(--color-yellow);
-  }
-
-  &[data-category='opinion']:after {
+  &[data-category='analysis']:after {
     border-left-color: var(--color-green);
     border-top-color: var(--color-green);
   }
 
-  &[data-category='politics']:after {
-    border-left-color: var(--color-teal);
-    border-top-color: var(--color-teal);
+  &[data-category='red-feed']:after {
+    border-left-color: var(--color-red);
+    border-top-color: var(--color-red);
   }
 
-  &[data-category='satire']:after {
-    border-left-color: var(--color-cyan);
-    border-top-color: var(--color-cyan);
-  }
-
-  &[data-category='tech']:after {
+  &[data-category='blue-feed']:after {
     border-left-color: var(--color-blue);
     border-top-color: var(--color-blue);
   }
 
-  &[data-category='trendolizer-picks']:after {
+  &[data-category='satire']:after {
     border-left-color: var(--color-indigo);
     border-top-color: var(--color-indigo);
-  }
-
-  &[data-category='video']:after {
-    border-left-color: var(--color-purple);
-    border-top-color: var(--color-purple);
   }
 }
