@@ -265,6 +265,7 @@ blockquote {
   width: 100%;
   padding: var(--gutter) 0;
   margin-top: calc(var(--grid-gutter) * -1);
+  margin-bottom: var(--grid-gutter);
 }
 
 .category-badge {

@@ -4318,7 +4318,38 @@ function enableSlider({
 
   return slider;
 }
-},{"tiny-slider/src/tiny-slider":"UxIs"}],"G8XX":[function(require,module,exports) {
+},{"tiny-slider/src/tiny-slider":"UxIs"}],"EX9L":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = all;
+
+function all(selector) {
+  const query = document.querySelectorAll(selector);
+  return query ? Array.from(query) : [];
+}
+},{}],"YbgP":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getMetaDataBySelector;
+
+var _all = _interopRequireDefault(require("./all"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function getMetaDataBySelector(selector, key, value) {
+  return (0, _all.default)(selector).reduce((acc, el) => {
+    const key = el.getAttribute(key);
+    acc[key] = el.getAttribute(value);
+    return acc;
+  }, {});
+}
+},{"./all":"EX9L"}],"G8XX":[function(require,module,exports) {
 "use strict";
 
 var _dropdown = _interopRequireDefault(require("./partials/dropdown"));
@@ -4326,6 +4357,8 @@ var _dropdown = _interopRequireDefault(require("./partials/dropdown"));
 var _modal = _interopRequireDefault(require("./partials/modal"));
 
 var _slider = _interopRequireDefault(require("./partials/slider"));
+
+var _getMeta = _interopRequireDefault(require("./partials/get-meta"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4338,5 +4371,5 @@ Array.from(document.querySelectorAll('.mod-slider-container')).forEach(el => {
     lazyload: false
   });
 });
-},{"./partials/dropdown":"BM30","./partials/modal":"bh8M","./partials/slider":"gKnT"}]},{},["G8XX"], null)
-//# sourceMappingURL=entry.0d555fad.js.map
+},{"./partials/dropdown":"BM30","./partials/modal":"bh8M","./partials/slider":"gKnT","./partials/get-meta":"YbgP"}]},{},["G8XX"], null)
+//# sourceMappingURL=entry.5b73ccc4.js.map

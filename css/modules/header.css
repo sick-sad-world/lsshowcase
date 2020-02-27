@@ -44,6 +44,7 @@
       overflow: hidden;
       text-decoration: none;
       white-space: nowrap;
+      letter-spacing: 1px;
       &:after {
         content: '';
         display: block;
@@ -66,6 +67,33 @@
       &.is-active {
         &:after {
           transform: translate3d(0, 0px, 0);
+        }
+      }
+      &.pol-feed {
+        img {
+          width: 24px;
+          margin-right: 8px;
+        }
+        span {
+          display: block;
+          text-align: left;
+        }
+        b {
+          display: block;
+          font-size: 1.25em;
+          line-height: 1;
+          font-family: var(--font-family-heading);
+          font-weight: normal;
+          letter-spacing: 0;
+        }
+        &:hover {
+          text-decoration: none;
+          b {
+            text-decoration: underline;
+          }
+          span {
+            text-decoration: underline;
+          }
         }
       }
     }

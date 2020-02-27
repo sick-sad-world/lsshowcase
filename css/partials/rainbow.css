@@ -18,168 +18,77 @@
     border-bottom-width: 4px;
     border-left-width: 2px;
     border-right-width: 2px;
+    border-top-color: var(--color-code);
+    border-left-color: var(--color-code);
   }
 }
 
-[data-category='hoax-alert'] {
+[data-color] {
   &.is-category {
     &-bg,
     &-after-bg:after,
     &-before-bg:before {
-      background-color: var(--color-orange);
+      background-color: var(--color-code);
     }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-orange);
+    &-bdl {
+      border-left-color: var(--color-code);
     }
     &-bdr {
-      border-right-color: var(--color-orange);
+      border-right-color: var(--color-code);
     }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-orange);
+    &-bdt {
+      border-top-color: var(--color-code);
     }
     &-bdb {
-      border-bottom-color: var(--color-orange);
+      border-bottom-color: var(--color-code);
     }
     &-color {
-      color: var(--color-orange);
+      color: var(--color-code);
     }
   }
 }
 
-[data-category='analysis'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-green);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-green);
-    }
-    &-bdr {
-      border-right-color: var(--color-green);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-green);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-green);
-    }
-    &-color {
-      color: var(--color-green);
-    }
-  }
+[data-color='red'] {
+  --color-code: var(--color-red);
 }
 
-[data-category='red-feed'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-red);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-red);
-    }
-    &-bdr {
-      border-right-color: var(--color-red);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-red);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-red);
-    }
-    &-color {
-      color: var(--color-red);
-    }
-  }
+[data-color='orange'] {
+  --color-code: var(--color-orange);
 }
 
-[data-category='blue-feed'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-blue);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-blue);
-    }
-    &-bdr {
-      border-right-color: var(--color-blue);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-blue);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-blue);
-    }
-    &-color {
-      color: var(--color-blue);
-    }
-  }
+[data-color='yellow'] {
+  --color-code: var(--color-yellow);
 }
 
-[data-category='satire'] {
-  &.is-category {
-    &-bg,
-    &-after-bg:after,
-    &-before-bg:before {
-      background-color: var(--color-indigo);
-    }
-    &-bdl,
-    &-arrow:after {
-      border-left-color: var(--color-indigo);
-    }
-    &-bdr {
-      border-right-color: var(--color-indigo);
-    }
-    &-bdt,
-    &-arrow:after {
-      border-top-color: var(--color-indigo);
-    }
-    &-bdb {
-      border-bottom-color: var(--color-indigo);
-    }
-    &-color {
-      color: var(--color-indigo);
-    }
-  }
+[data-color='green'] {
+  --color-code: var(--color-green);
 }
 
-.category-badge,
-.mod-fullmenu-list li {
-  &[data-category='hoax-alert']:after {
-    border-left-color: var(--color-orange);
-    border-top-color: var(--color-orange);
-  }
+[data-color='teal'] {
+  --color-code: var(--color-teal);
+}
 
-  &[data-category='analysis']:after {
-    border-left-color: var(--color-green);
-    border-top-color: var(--color-green);
-  }
+[data-color='cyan'] {
+  --color-code: var(--color-cyan);
+}
 
-  &[data-category='red-feed']:after {
-    border-left-color: var(--color-red);
-    border-top-color: var(--color-red);
-  }
+[data-color='blue'] {
+  --color-code: var(--color-blue);
+}
 
-  &[data-category='blue-feed']:after {
-    border-left-color: var(--color-blue);
-    border-top-color: var(--color-blue);
-  }
+[data-color='indigo'] {
+  --color-code: var(--color-indigo);
+}
 
-  &[data-category='satire']:after {
-    border-left-color: var(--color-indigo);
-    border-top-color: var(--color-indigo);
-  }
+[data-color='purple'] {
+  --color-code: var(--color-purple);
+}
+
+[data-color='pink'] {
+  --color-code: var(--color-pink);
+}
+
+.mod-fullmenu-list li:after {
+  border-left-color: var(--color-code);
+  border-top-color: var(--color-code);
 }
