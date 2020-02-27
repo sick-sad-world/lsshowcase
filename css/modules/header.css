@@ -70,14 +70,12 @@
       }
     }
   }
+  .social-share {
+    margin: 0 0 0 auto;
+  }
   @media screen and (max-width: 980px) {
     padding: 0;
     justify-content: space-between;
-    &:after {
-      content: '';
-      display: block;
-      width: var(--layout-header);
-    }
     > *:not(:last-child) {
       margin-right: 0;
     }
@@ -86,9 +84,6 @@
     }
   }
   @media screen and (max-width: 520px) {
-    &:after {
-      width: var(--layout-header-mobile);
-    }
     .layout-container {
       padding: 0;
     }
@@ -98,6 +93,7 @@
       width: var(--layout-header-mobile);
     }
     &-logo {
+      margin: 0 auto;
       img {
         width: 140px;
       }

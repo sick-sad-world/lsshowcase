@@ -1,6 +1,7 @@
 import dropdown from './partials/dropdown';
 import enableModal from './partials/modal';
 import enableSlider from './partials/slider';
+import getMetaDataBySelector from './partials/get-meta';
 
 enableModal();
 dropdown();

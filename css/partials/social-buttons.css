@@ -145,4 +145,12 @@
     height: 1em;
     vertical-align: -2px;
   }
+
+  &.size-small {
+    a {
+      padding: 0;
+      width: 2em;
+      text-align: center;
+    }
+  }
 }
