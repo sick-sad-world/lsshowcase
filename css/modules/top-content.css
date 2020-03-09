@@ -59,4 +59,23 @@
     margin-bottom: var(--gutter-half);
     margin-right: var(--gutter);
   }
+  @media screen and (max-width: 520px) {
+    article:first-child {
+      .mod-top-content-title {
+        font-size: var(--font-size-h3);
+      }
+      .caption-overlay {
+        --overlay-font-size: 2em;
+      }
+    }
+    &-stripe {
+      position: static;
+    }
+    .category-badge {
+      position: absolute;
+      left: -4px;
+      bottom: 100%;
+      z-index: 2;
+    }
+  }
 }
