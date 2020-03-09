@@ -35,5 +35,8 @@
     > .overlay-link {
       grid-gap: 0;
     }
+    &-media {
+      margin-bottom: var(--gutter-half);
+    }
   }
 }

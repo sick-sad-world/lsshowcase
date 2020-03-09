@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-
-const target = './dist';
+const target = process.argv[2].split('=')[1];
+console.log(target);
 const dest = './done';
 const enc = 'utf8';
 
@@ -14,7 +14,7 @@ const copyFileAsync = util.promisify(fs.copyFile);
 
 const cssFileRegExp = /^main\.[a-z0-9A-Z]{8}\.css$/;
 const srcPathRegExp = /\.[a-z0-9A-Z]{8}\./;
-const fontSrcRegExp = /url\('(\/[a-zA-Z]+\.[a-z0-9]{8}\.(svg|ttf|woff2?))'\)/g;
+const fontSrcRegExp = /url\('?(\/[a-zA-Z]+\.[a-z0-9]{8}\.(svg|ttf|woff2?))'?\)/g;
 const fontSrcNeedle = '/';
 const fontSrcTarget = 'theme/';
 const imgSrcTarget = 'theme/img/';

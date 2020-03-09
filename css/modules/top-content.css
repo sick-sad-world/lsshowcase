@@ -17,18 +17,6 @@
     overflow: hidden;
   }
 
-  img {
-    transition: transform calc(var(--transition-duration) * 3) ease-in;
-  }
-
-  .overlay-link {
-    &:hover {
-      img {
-        transform: scale3d(1.05, 1.05, 1);
-      }
-    }
-  }
-
   article {
     position: relative;
     &:first-child {
@@ -43,8 +31,7 @@
         font-size: var(--font-size-h2);
       }
       .caption-overlay {
-        --overlay-font-size: 3em;
-        width: 42%;
+        --overlay-font-size: 2.8em;
       }
     }
   }

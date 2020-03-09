@@ -23,6 +23,10 @@
       fill: var(--color-secondary);
     }
   }
+  .caption-overlay {
+    --overlay-font-size: var(--font-size-h2);
+  }
+
   .overlay-link {
     display: flex;
     flex-direction: column;
