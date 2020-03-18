@@ -7,20 +7,20 @@
 }
 
 @font-face {
-  font-family: 'SpecialElite';
+  font-family: 'Avaria Serif Libre';
   font-weight: 400;
   font-display: swap;
-  src: url('SpecialElite.2fe49a80.woff2') format('woff2'), url('SpecialElite.e0b37970.woff') format('woff'),
-    url('SpecialElite.de683d1f.ttf') format('truetype');
+  src: url('averiaseriflibre.747491af.woff2') format('woff2'), url('averiaseriflibre.b5b861d0.woff') format('woff'),
+    url('averiaseriflibre.058d270b.ttf') format('truetype');
 }
 
 :root {
   --font-size: 14px;
   --line-height: 24px;
   --line-height-s: 20px;
-  --font-family: Arial, Sans-serif;
+  --font-family: Arial, sans-serif;
   --font-family-heading: 'Oswald', sans-serif;
-  --font-family-stamp: 'SpecialElite', cursive;
+  --font-family-stamp: 'Avaria Serif Libre', sans-serif;
 
   --font-size-h1: calc(var(--font-size) * 2);
   --font-size-h2: calc(var(--font-size) * 1.625);
@@ -312,12 +312,13 @@ blockquote:before {
   font-family: var(--font-family-stamp);
   font-size: var(--overlay-font-size, var(--font-size-h1));
   line-height: 1;
-  height: 1.8em;
+  width: 15ch;
+  height: 2em;
   background-color: #eed1a7;
   border-radius: 6px;
   border: 3px solid var(--overlay-color, var(--color-orange));
   box-shadow: var(--shadow-depth-2);
-  padding: 0.3em 1em;
+  padding: 0.4em 0.5ch;
 }
 
 .caption-overlay.color-red {
@@ -436,7 +437,7 @@ ul.article-list {
   padding: 0;
 }
 
-ul.article-list > li:not(:first-child):not(:last-child) {
+ul.article-list > li:not(:first-child) {
     margin-top: var(--grid-gutter);
   }
 
@@ -468,12 +469,13 @@ ul.striped-list {
   padding: 0;
 }
 
-ul.striped-list li {
-    margin: var(--gutter-half) 0;
-  }
+ul.striped-list > li:not(:first-child) {
+      margin-top: var(--grid-gutter);
+    }
 
-ul.striped-list li:not(:last-child) {
-      padding-bottom: var(--gutter-half);
+ul.striped-list > li:not(:last-child) {
+      margin-bottom: var(--grid-gutter);
+      padding-bottom: var(--grid-gutter);
       border-bottom: 1px solid var(--color-border);
     }
 
@@ -554,9 +556,6 @@ figure.fixed-media .caption-overlay {
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 60%;
-    padding-left: 0;
-    padding-right: 0;
     transform: rotate(-10deg);
   }
 
@@ -1387,6 +1386,12 @@ button.icon-only:hover,
     margin: 0 0 0 auto;
   }
 
+@media screen and (max-width: 1064px) {
+      .mod-header-nav a {
+        padding: 0 var(--gutter-half);
+      }
+  }
+
 @media screen and (max-width: 980px) {
 
 .mod-header {
@@ -1801,6 +1806,9 @@ button.icon-only:hover,
     .mod-default-article > .overlay-link {
       grid-gap: 0;
     }
+    .mod-default-article-media {
+      margin-bottom: var(--gutter-half);
+    }
   }
 
 .mod-picture-article {
@@ -1829,6 +1837,9 @@ button.icon-only:hover,
   .mod-picture-article-footer svg {
       fill: var(--color-secondary);
     }
+  .mod-picture-article .caption-overlay {
+    --overlay-font-size: var(--font-size-h2);
+  }
   .mod-picture-article .overlay-link {
     display: flex;
     flex-direction: column;
@@ -1940,14 +1951,6 @@ button.icon-only:hover,
     overflow: hidden;
   }
 
-  .mod-top-content img {
-    transition: transform calc(var(--transition-duration) * 3) ease-in;
-  }
-
-  .mod-top-content .overlay-link:hover img {
-        transform: scale3d(1.05, 1.05, 1);
-      }
-
   .mod-top-content article {
     position: relative;
   }
@@ -1969,8 +1972,7 @@ button.icon-only:hover,
       }
 
   .mod-top-content article:first-child .caption-overlay {
-        --overlay-font-size: 3em;
-        width: 42%;
+        --overlay-font-size: 2.8em;
       }
 
   .mod-top-content-stripe {
@@ -1989,12 +1991,35 @@ button.icon-only:hover,
   .mod-top-content-additional {
     display: flex;
     align-items: flex-start;
+    width: 100%;
+  }
+
+  .mod-top-content .secondary-data {
+    flex: 0 1 auto;
   }
 
   .mod-top-content .category-badge {
     width: 110px;
     margin-bottom: var(--gutter-half);
     margin-right: var(--gutter);
+  }
+
+  @media screen and (max-width: 520px) {
+      .mod-top-content article:first-child .mod-top-content-title {
+        font-size: var(--font-size-h3);
+      }
+      .mod-top-content article:first-child .caption-overlay {
+        --overlay-font-size: 2em;
+      }
+    .mod-top-content-stripe {
+      position: static;
+    }
+    .mod-top-content .category-badge {
+      position: absolute;
+      left: -4px;
+      bottom: 100%;
+      z-index: 2;
+    }
   }
 
 .mod-full-article-header hgroup {
@@ -2487,4 +2512,4 @@ button.icon-only:hover,
 
 
 
-/*# sourceMappingURL=main.77a7ea16.css.map */
+/*# sourceMappingURL=main.8143335a.css.map */

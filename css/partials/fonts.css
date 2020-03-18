@@ -7,9 +7,9 @@
 }
 
 @font-face {
-  font-family: 'SpecialElite';
+  font-family: 'Avaria Serif Libre';
   font-weight: 400;
   font-display: swap;
-  src: url('../../font/SpecialElite.woff2') format('woff2'), url('../../font/SpecialElite.woff') format('woff'),
-    url('../../font/SpecialElite.ttf') format('truetype');
+  src: url('../../font/averiaseriflibre.woff2') format('woff2'), url('../../font/averiaseriflibre.woff') format('woff'),
+    url('../../font/averiaseriflibre.ttf') format('truetype');
 }

@@ -52,6 +52,11 @@
   &-additional {
     display: flex;
     align-items: flex-start;
+    width: 100%;
+  }
+
+  .secondary-data {
+    flex: 0 1 auto;
   }
 
   .category-badge {

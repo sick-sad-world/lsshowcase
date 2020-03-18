@@ -2,9 +2,9 @@
   --font-size: 14px;
   --line-height: 24px;
   --line-height-s: 20px;
-  --font-family: Arial, Sans-serif;
+  --font-family: Arial, sans-serif;
   --font-family-heading: 'Oswald', sans-serif;
-  --font-family-stamp: 'SpecialElite', cursive;
+  --font-family-stamp: 'Avaria Serif Libre', sans-serif;
 
   --font-size-h1: calc(var(--font-size) * 2);
   --font-size-h2: calc(var(--font-size) * 1.625);
