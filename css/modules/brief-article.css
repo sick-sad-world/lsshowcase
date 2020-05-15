@@ -16,9 +16,9 @@
     font-size: 0.875em;
   }
   figure.fixed-media .caption-overlay {
-    width: 75%;
+    --overlay-font-size: 0.95em;
   }
-  @media screen and (min-width: 520px) and (max-width: 980px) {
+  @media screen and (min-width: 520px) and (max-width: 1130px) {
     &-image {
       flex-basis: 240px;
     }

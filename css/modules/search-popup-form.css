@@ -1,0 +1,35 @@
+.mod-search-popup-form {
+  visibility: collapse;
+  opacity: 0;
+  transform: translate3d(0, -50%, 0);
+  position: absolute;
+  top: calc(var(--layout-header) - 8px);
+  right: var(--grid-columns-gap);
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-depth-3);
+  padding: var(--gutter-half) 0;
+  transition: transform var(--transition-duration), visibility var(--transition-duration),
+    opacity var(--transition-duration);
+  &.is-visible {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+  form {
+    width: 320px;
+    display: flex;
+  }
+  input[type='text'] {
+    flex: 1;
+    padding-left: var(--gutter);
+  }
+}
+@media screen and (max-width: 520px) {
+  .mod-search-popup-form {
+    left: 0;
+    right: 0;
+    form {
+      width: auto;
+    }
+  }
+}

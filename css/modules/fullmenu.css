@@ -134,7 +134,7 @@
   &.is-visible {
     transform: translate3d(0, 0, 0);
   }
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1130px) {
     &-container {
       /*transform: translate3d(-100%, 0, 0);*/
       transition: transform var(--transition-duration) ease-in;

@@ -26,7 +26,7 @@
   },
   "svgSpriteOptions": {
     "include": [
-      "icons/**/*"
+      "icons/**/*.svg"
     ],
     "exclude": [
       "img"

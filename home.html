@@ -31,15 +31,27 @@
             </a>
           </div>
           <!-- End Site logotype -->
+          <!-- Site search -->
+          <div class="mod-header-search">
+            <form action="/cgi-bin/mt/mt-search.cgi" method="GET">
+              <svg data-role="icon" viewBox="0 0 24 24">
+                <use href="icons/search.svg"></use>
+              </svg>
+              <input type="hidden" value="1" name="IncludeBlogs">
+              <input aria-label="Search Leadstories for" type="text" name="search" aria-placeholder="Search..." placeholder="Search..." />
+              <button type="submit">Go</button>
+            </form>
+          </div>
+          <!-- End Site search -->
           <!-- Main header navigation -->
           <nav class="mod-header-nav">
-            <a href="/category.html" class="is-category-after-bg is-active" data-color="orange" aria-label="Hoax Alert">
+            <a href="/category.html" class="is-category-after-bg is-active" data-color="red" aria-label="Hoax Alert">
               <span>Hoax Alert</span>
             </a>
             <a
               href="/category.html"
               class="is-category-after-bg"
-              data-color="green"
+              data-color="yellow"
               aria-label="Analysis"
             >
               <span>Analysis</span>
@@ -47,20 +59,37 @@
             <a
               href="/category.html"
               class="is-category-after-bg"
-              data-color="red"
-              aria-label="Red Feed"
+              data-color="green"
+              aria-label="Corrections"
             >
-              <span>Red Feed</span>
+              <span>Corrections</span>
             </a>
-            <a href="/category.html" class="is-category-after-bg" data-color="blue" aria-label="Blue Feed">
-              <span>Blue Feed</span>
+            <a href="http://trendstreamer.com/red-feed/" class="is-category-after-bg  pol-feed" data-color="red" aria-label="Red Feed">
+          
+              <img src="/img/republican.svg" alt="Republicans elephant">
+              <span><b class="is-category-color" data-color="red">Red</b> Feed</span>
+            
             </a>
-            <a href="/category.html" class="is-category-after-bg" data-color="indigo" aria-label="Satire">
-              <span>Satire</span>
+            <a href="http://trendstreamer.com/blue-feed/" class="is-category-after-bg  pol-feed" data-color="blue" aria-label="Blue Feed">
+            
+              <img src="http://trendstreamer.com/theme/img/democrat.svg" alt="Democrats donkey">
+              <span><b class="is-category-color" data-color="blue">Blue</b> Feed</span>
+            
+            </a>
+            <a href="http://trendstreamer.com/coronavirus/" class="is-category-after-bg  pol-feed" data-color="indigo" aria-label="Coronavirus">
+              
+              <img src="http://trendstreamer.com/theme/img/virus.svg" alt="Virus of Corona">
+              <span><b class="is-category-color" data-color="indigo">Corona</b> Virus</span>
+            
             </a>
           </nav>
           <!-- End Main header navigation -->
           <div class="social-share size-small">
+            <!-- <a id="header-search-trigger" aria-label="Search">
+              <svg data-role="icon" viewBox="0 0 24 24">
+                <use href="icons/search.svg"></use>
+              </svg>
+            </a> -->
             <a class="facebook-share facebook" aria-label="Share">
               <svg data-role="icon" viewBox="0 0 24 24">
                 <use href="icons/facebook.svg"></use>
@@ -73,6 +102,13 @@
               </svg>
             </a>
           </div>
+          <!-- <div class="mod-search-popup-form" id="header-search-target">
+            <form action="/cgi-bin/mt/mt-search.cgi" method="GET">
+              <input type="hidden" value="1" name="IncludeBlogs">
+              <input aria-label="Search Leadstories for" type="text" name="search" aria-placeholder="Search..." placeholder="Search..." />
+              <button type="submit">Go</button>
+            </form>
+          </div> -->
         </div>
       </header>
       <!-- End Layout header -->

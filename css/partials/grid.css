@@ -5,11 +5,17 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr [col-start]);
-  grid-gap: var(--grid-gutter);
   grid-auto-rows: auto;
+  grid-row-gap: var(--grid-rows-gap);
+  grid-column-gap: var(--grid-columns-gap);
   & > div[class*='cell'] > .mod-content-section + .mod-content-section {
-    margin-top: var(--grid-gutter);
+    margin-top: var(--grid-rows-gap);
   }
+
+  .grid {
+    grid-column-gap: var(--grid-gutter);
+  }
+
   & > .cell {
     grid-column-start: auto;
     &-rowspan {
@@ -66,7 +72,7 @@
     &-12 {
       grid-column-end: span 12;
     }
-    @media screen and (min-width: 980px) {
+    @media screen and (min-width: 1130px) {
       &-desktop-0 {
         display: none;
         grid-column-end: span 0;
@@ -108,7 +114,7 @@
         grid-column-end: span 12;
       }
     }
-    @media screen and (min-width: 520px) and (max-width: 980px) {
+    @media screen and (min-width: 520px) and (max-width: 1130px) {
       &-tablet-0 {
         display: none;
         grid-column-end: span 0;

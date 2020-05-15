@@ -7,13 +7,16 @@
   height: 100%;
   display: flex;
   align-items: center;
+  position: relative;
+  > * {
+    min-width: 0;
+  }
   > *:not(:last-child) {
-    margin-right: var(--grid-gutter);
+    margin-right: var(--gutter);
   }
   &-button {
-    padding: var(--gutter-half);
-    width: var(--layout-header);
-    height: 100%;
+    width: calc(var(--layout-header) * 0.5);
+    height: calc(var(--layout-header) * 0.5);
     button {
       width: 100%;
       height: 100%;
@@ -34,9 +37,11 @@
   &-nav {
     display: flex;
     height: 100%;
+    overflow: hidden;
     a {
       display: flex;
       align-items: center;
+      flex: 0 0 auto;
       padding: 0 var(--gutter);
       color: inherit;
       height: 100%;
@@ -98,40 +103,74 @@
       }
     }
   }
-  .social-share {
-    margin: 0 0 0 auto;
+  &-search {
+    flex: 1;
+    order: 2;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    svg {
+      margin: 0 calc(var(--icon-size) * -1) 0 0;
+      position: relative;
+      left: var(--gutter-half);
+    }
+    form {
+      display: flex;
+      align-items: center;
+    }
+    input[type='text'] {
+      align-self: stretch;
+      min-width: 0;
+      flex: 1;
+      padding-left: calc(var(--gutter) + var(--icon-size));
+    }
   }
-  @media screen and (max-width: 1064px) {
+  .social-share {
+    order: 3;
+    flex: 0 0 auto;
+  }
+  @media screen and (max-width: 1330px) {
     &-nav {
       a {
         padding: 0 var(--gutter-half);
       }
     }
   }
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1130px) {
     padding: 0;
-    justify-content: space-between;
-    > *:not(:last-child) {
-      margin-right: 0;
-    }
     &-nav {
       display: none;
     }
   }
   @media screen and (max-width: 520px) {
-    .layout-container {
-      padding: 0;
+    &.layout-container {
+      padding: 0 var(--gutter-half);
     }
     &-button {
       padding: 2px;
-      margin-left: calc(var(--grid-gutter) * -1);
       width: var(--layout-header-mobile);
     }
     &-logo {
-      margin: 0 auto;
+      margin: 0 auto !important;
       img {
         width: 140px;
       }
+    }
+  }
+  @media screen and (max-width: 1200px) and (min-width: 1130px) {
+    &-search:focus-within + &-nav {
+      width: 30%;
+      box-shadow: inset -7px 0 5px rgba(0, 0, 0, 0.12);
+    }
+  }
+  @media screen and (max-width: 1130px) {
+    &-search {
+      flex: 0 1 240px;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &-search {
+      display: none;
     }
   }
 }

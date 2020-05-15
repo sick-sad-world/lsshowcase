@@ -15,17 +15,20 @@ export default function enableModal(opts = {}) {
 
   button.addEventListener('click', () => {
     modal.classList.add('is-visible');
+    document.documentElement.classList.add('no-scroll');
     modal.setAttribute('aria-hidden', 'false');
   });
 
   overlay.addEventListener('click', () => {
     modal.classList.remove('is-visible');
+    document.documentElement.classList.remove('no-scroll');
     modal.setAttribute('aria-hidden', 'true');
     overlay.blur();
   });
 
   closeBtn.addEventListener('click', () => {
     modal.classList.remove('is-visible');
+    document.documentElement.classList.remove('no-scroll');
     modal.setAttribute('aria-hidden', 'true');
   });
 

@@ -34,7 +34,12 @@
       margin: auto;
     }
   }
-  @media screen and (min-width: 520px) and (max-width: 980px) {
+  .ifcn-badge {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 520px) and (max-width: 1130px) {
     &-nav {
       width: auto;
     }

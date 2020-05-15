@@ -26,16 +26,24 @@
     }
   }
   &-primary-media {
-    --overlay-font-size: 3.2em;
-    &-small {
-      width: 40%;
-      float: left;
-      margin-right: var(--grid-gutter);
-    }
+    margin-bottom: var(--gutter);
   }
   &-appendix {
     > * {
-      margin: var(--grid-gutter) 0;
+      margin: var(--grid-rows-gap) 0;
+    }
+    .copy-text {
+      max-width: 840px;
+    }
+  }
+  @media screen and (min-width: 520px) {
+    &-primary-media {
+      --overlay-font-size: 3.2em;
+      &-small {
+        width: 40%;
+        float: left;
+        margin-right: var(--grid-columns-gap);
+      }
     }
   }
   @media screen and (max-width: 520px) {
@@ -49,6 +57,9 @@
       > * {
         margin: var(--gutter-half) 0;
       }
+    }
+    &-primary-media-small {
+      margin-bottom: var(--gutter);
     }
   }
 }

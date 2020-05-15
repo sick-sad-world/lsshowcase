@@ -3,7 +3,7 @@
     --padding: 4px;
     border-bottom: 1px solid var(--color-border);
     padding-bottom: calc(var(--padding) - 1px);
-    margin-bottom: var(--grid-gutter);
+    margin-bottom: var(--grid-rows-gap);
     color: var(--color-primary-lt);
   }
   &-title {
@@ -14,7 +14,7 @@
     }
   }
   &-addon {
-    margin-top: var(--grid-gutter);
+    margin-top: var(--grid-rows-gap);
   }
   &-raw {
     &:after {

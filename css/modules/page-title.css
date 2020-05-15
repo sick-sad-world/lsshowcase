@@ -1,7 +1,4 @@
 .mod-page-title {
-  &-textbar {
-    margin-bottom: var(--grid-gutter);
-  }
   &-subtext {
     font-family: var(--font-family);
     font-size: var(--font-size-h3);
@@ -22,7 +19,7 @@
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
-      minmax(calc((var(--layout-overlay-width) - (var(--grid-gutter) * 2)) / 2), 1fr)
+      minmax(calc((var(--layout-overlay-width) - (var(--grid-columns-gap) * 2)) / 2), 1fr)
     );
     grid-template-rows: auto;
     grid-gap: var(--gutter-half);

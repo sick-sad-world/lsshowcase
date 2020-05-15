@@ -1,4 +1,9 @@
 .mod-author-info {
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
   &-image {
     float: left;
     margin-right: var(--gutter);

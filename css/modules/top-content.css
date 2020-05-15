@@ -1,7 +1,10 @@
 .mod-top-content {
   padding: 0;
-  grid-gap: var(--gutter-half);
   color: var(--color-secondary);
+
+  &.grid {
+    grid-gap: var(--gutter);
+  }
 
   svg {
     fill: var(--color-secondary);

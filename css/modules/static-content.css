@@ -17,14 +17,14 @@
   }
 
   &-heading {
-    margin-bottom: var(--grid-gutter);
+    margin-bottom: var(--grid-rows-gap);
   }
 
   &-inner {
-    margin: var(--grid-gutter) 0;
+    margin: var(--grid-rows-gap) 0;
   }
 
   &-appendix {
-    margin-top: var(--grid-gutter);
+    margin-top: var(--grid-rows-gap);
   }
 }
